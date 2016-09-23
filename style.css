@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+canvas#skillChart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.small-caps { font-variant: small-caps}
+
+p.nomargin { margin: 0; }
+
+.full-width: { width: 100vw; }
+
+.panel-title { margin: 0; }
+
+#header {
+  /*height: 50vh;*/
+  padding-top:12.5vh;
+  padding-bottom: 12.5vh;
+  background-image: url('http://www.presse-citron.net/wordpress_prod/wp-content/uploads/2015/09/Code-bureau-laptop-d%C3%A9veloppeur.png');
+  background-size: cover;
+  color: white;
+}
+
+.hr-margin { margin: 0 10vw; }
+.fat-hr.hr-margin {     
+    margin: 0 33vw;
+    border-top: solid 3px;
+    border-color: #616161;
+    color: #616161; 
+}
+
+.brand-logo { padding-left: 1em !important; }
+
+.row-full, .row-full>.col, .row-full>.col .card {
+  height: 100vh;
+}
+
+.card-overflow {
+  overflow: hidden
+}
+
+.col-nomargin, .col-nomargin .card {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card-overtitle {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card-content {
+  text-align: center;
+}
+
+p.card-title {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,0);
+}
+
+.veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  z-index: 11;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in-out;
+        -moz-transition: opacity 200ms ease-in-out;
+        -ms-transition: opacity 200ms ease-in-out;
+        -o-transition: opacity 200ms ease-in-out;
+        transition: opacity 200ms ease-in-out;
+}
+.veil:hover {
+  opacity: .3;
+    cursor: pointer;
+}
+
+.bold { font-weight: 500 !important; }
+
+.card { height: 50vh; }
+.card-content { height: 75%; }
+.card-action { height: 25%; }
+.card.chart-bg .card-content { background-color: #252525; }
+.card.img-bg .card-content {
+  background-image: url('https://raw.githubusercontent.com/itsmhuang/my-portfolio/master/images/cubes.png');
+  background-color: #0091ea;
+}
+
+.cards-container, #timeline, #skillset, #portfolio { margin-top: 3em; }
+#timeline, #skillset, #portfolio { padding-top: 1em; }
