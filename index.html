@@ -1,96 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+
 <head>
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
-	<link rel='stylesheet' href="style.css"/>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
+  <link rel='stylesheet' href="style.css" />
 
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 </head>
+
 <body>
-<div id="body-wrap">
-<ul id='dropdown1' class='dropdown-content'>
-  <li><a href="#!" class="grey-text text-darken-3">Parcours</a></li>
-  <li><a href="#!" class="grey-text text-darken-3">Compétences</a></li>
-  <li><a href="#!" class="grey-text text-darken-3">Portfolio</a></li>
-  <li class="divider"></li>
-  <li><a href="#!" class="grey-text text-darken-3">Contact</a></li>
-</ul>
-<nav class="grey lighten-3">
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo small-caps grey-text text-darken-3">Nicolas THEBAUD</a>
-    <ul class="right hide-on-med-and-down">
-        <li><a class="dropdown-button grey-text text-darken-3" href="#!" data-activates="dropdown1">Naviguer<i class="material-icons right">view_headline</i></a></li>
-    </ul>
-  </div>
-</nav>
-
-<div id="header" class="z-depth-2">
-  <h2 class="center-align small-caps">Nicolas THEBAUD</h2>
-  <h5 class="center-align">WEB DEVELOPER</h5>
-  <hr class="hr-margin">
-  <div class="center-align">
-    <p class="flow-text">
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      <br>Mundi placet et spiritus minima deus rex
-    </p>
-  </div>
-</div>
-
-<div class="container cards-container">
-  <div class="row">
-    <div class="col s12 m6 l4">
-      <div class="card img-bg">
-        <div class="card-content"><p class="flow-text card-title white-text bold">Parcours</p></div>
-        <div class="card-action"><a href="#">This is a link</a></div>
-      </div>
-    </div>
-    <div class="col s12 m6 l4">
-      <div class="card chart-bg">
-        <div class="card-content">
-          <canvas id="skillChart"></canvas>
-          <p class="flow-text card-title white-text bold">Compétences</p>
+  <main class="grey lighten-3">
+    <div class="navbar-fixed">
+      <nav class="blue darken-3">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Nicolas Thebaud</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#section-timeline">Expérience</a></li>
+            <li><a href="#section-skillset">Compétences</a></li>
+            <li><a href="#section-work">Travaux</a></li>
+          </ul>
         </div>
-        <div class="card-action"><a href="#">This is a link</a></div>
-      </div>
+      </nav>
     </div>
-    <div class="col s12 m6 l4">
-      <div class="card particle-bg">
-        <div class="card-content">
-          <div id="particles-js"></div>
-          <p class="flow-text card-title white-text bold">Portfolio</p>
+
+    <section class="about grey lighten-3"></section>
+
+    <section class="section-timeline grey lighten-3 blue-text text-darken-3">
+      <h3 class="section-title">Expérience</h3>
+    </section>
+
+    <section class="section-skillset grey lighten-3 blue-text text-darken-3">
+      <h3 class="section-title">Compétences</h3>
+    </section>
+
+    <section class="section-work grey lighten-3 blue-text text-darken-3">
+      <h3 class="section-title">Travaux</h3>
+      <section class="work-official"></section>
+      <section class="work-personnal"></section>
+    </section>
+
+    <footer class="page-footer blue darken-3">
+      <div class="container white-text">
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by Nicolas THEBAUD
+          <a class="grey-text text-lighten-4 right" href="#!">Contact me</a>
         </div>
-        <div class="card-action"><a href="#">This is a link</a></div>
       </div>
-    </div>
-  </div>
-</div>
-
-<div id="about" class="full-width center-align">
-  <h2 class="panel-title small-caps grey-text text-darken-3 center-align">Title</h2>
-  <hr class="fat-hr hr-margin">
-  <p class="flow-text">
-    Consectetur adipiscing elit deus rex
-  </p>
-</div>
-
-<div id="timeline" class="grey lighten-2 full-width z-depth-2">
-  <h2 class="panel-title small-caps grey-text text-darken-3 center-align">Title</h2>
-  <hr class="fat-hr hr-margin">
-</div>
-
-<div id="skillset" class="full-width">
-  <h2 class="panel-title small-caps grey-text text-darken-3 center-align">Title</h2>
-  <hr class="fat-hr hr-margin">
-</div>
-
-<div id="portfolio" class="grey lighten-2 full-width z-depth-2">
-  <h2 class="panel-title small-caps grey-text text-darken-3 center-align">Title</h2>
-  <hr class="fat-hr hr-margin">
-</div>
-
-<footer id="contact"></footer>
-</div>
+    </footer>
+  </main>
 </body>
+
 </html>
