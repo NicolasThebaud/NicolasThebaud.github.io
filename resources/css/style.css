@@ -1,0 +1,14 @@
+main {}
+
+.about {
+  height: 30vh;
+}
+
+.brand-logo {
+  font-weight: lighter;
+  padding-left: 1.5em !important;
+}
+
+section {
+  padding-left: 2.5vw;
+}
