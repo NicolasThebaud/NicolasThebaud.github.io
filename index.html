@@ -198,7 +198,7 @@
       <div class="footer-copyright">
         <div class="container">
           Made by Nicolas THEBAUD
-          <a class="grey-text text-lighten-4 right" href="#!">Contact me</a>
+          <a class="grey-text text-lighten-4 right modal-trigger" href="#modal1">Contact me</a>
         </div>
       </div>
     </footer>
@@ -207,11 +207,23 @@
       (function() {
         'use strict'
         $('.parallax').parallax()
+        $('.modal-trigger').leanModal()
 
         $(document).on('click', '.findme-token', function() {
           window.location=$(this).attr('data-link')
         })
       })()
     </script>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="blue-text text-darken-3">Contact Me</h4>
+        <p><u>thebaud.nicolas012@gmail.com</u></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+      </div>
+    </div>
   </body>
 </html>
