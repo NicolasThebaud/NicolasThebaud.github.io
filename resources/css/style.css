@@ -1,7 +1,7 @@
 main {}
 
 .about {
-  height: 30vh;
+  height: 40vh;
 }
 
 .brand-logo {
@@ -9,6 +9,20 @@ main {}
   padding-left: 1.5em !important;
 }
 
-section {
-  padding-left: 2.5vw;
+#section-about {
+  background-color: transparent !important;
+}
+
+.lightweight {
+  font-weight: lighter;
+}
+
+.full-width {
+  width: 100%;
+}
+
+hr.fancy {
+  height: 0.1em;
+  border: 0;
+  width: 33%;
 }

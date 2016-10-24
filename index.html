@@ -3,16 +3,17 @@
 
 <head>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
   <link rel='stylesheet' href="resources/css/style.css" />
   <link rel='stylesheet' href="resources/css/timeline.css" />
 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+  <title>Nicolas THEBAUD</title>
 </head>
 
-<body>
-  <main class="grey lighten-3">
+<body class="grey lighten-2">
     <div class="navbar-fixed">
       <nav class="blue darken-3">
         <div class="nav-wrapper">
@@ -26,9 +27,19 @@
       </nav>
     </div>
 
-    <section class="about grey lighten-3"></section>
+    <section id="section-about" class="parallax-container valign-wrapper">
+      <div class="heading full-width">
+        <h2 class="center-align lightweight blue-text text-darken-3">Nicolas THEBAUD</h2> 
+        <hr class="fancy blue darken-3"/>
+        <p class="center-align bold blue-text text-darken-3">Jeune développeur WEB Nantais</p>
+      </div>
+      <div class="parallax">
+        <img src="resources/img/bg.jpg"/>
+      </div>
+    </section>  
 
-    <section class="section-timeline grey lighten-3 blue-text text-darken-3">
+    <div class="container content">
+      <section id="section-timeline" class="grey lighten-2 blue-text text-darken-3">
       <h3 class="section-title">Expérience</h3>
       <ul class="timeline">
         <li>
@@ -71,9 +82,9 @@
           </div>
         </li>
       </ul>
-    </section>
+      </section>
 
-    <section class="section-skillset grey lighten-3 blue-text text-darken-3">
+      <section id="section-skillset" class="grey lighten-2 blue-text text-darken-3">
       <h3 class="section-title">Compétences</h3>
       <div class="row">
         <div class="col s12 m6 offset-m3">
@@ -141,13 +152,14 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
-    <section class="section-work grey lighten-3 blue-text text-darken-3">
+      <section id="section-work" class="grey lighten-2 blue-text text-darken-3">
       <h3 class="section-title">Travaux</h3>
       <section class="work-official"></section>
       <section class="work-personnal"></section>
-    </section>
+      </section>
+    </div>
 
     <footer class="page-footer blue darken-3">
       <div class="container white-text">
@@ -160,7 +172,13 @@
         </div>
       </div>
     </footer>
-  </main>
+
+  <script type="text/javascript">
+  (function() {
+    'use strict'
+    $('.parallax').parallax()
+  })()
+  </script>
 </body>
 
 </html>
