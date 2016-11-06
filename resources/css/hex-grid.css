@@ -1,0 +1,62 @@
+.hex-grid {
+  padding: 60px;
+  padding-top: 10vh;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.hex-col {
+  position: relative;
+  margin-top: -6%;
+  margin-right: 1%;
+  margin-left: 1%;
+  width: 30%;
+  float: left;
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hex-col:before {
+  display: block;
+  padding-top: 112.5%;
+  content: '';
+}
+
+.hex-col:nth-child(1), .hex-col:nth-child(2) {
+  margin-top: 0;
+}
+
+.hex-col:nth-child(7n - 1), .hex-col:nth-child(1) {
+  margin-left: 19%;
+}
+
+.hex-col:nth-child(4n - 1) {
+  margin-left: 3%;
+}
+
+
+
+.hex-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.hex-content:before, .hex-content:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s;
+}
