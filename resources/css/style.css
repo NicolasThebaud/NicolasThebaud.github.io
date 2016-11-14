@@ -1,4 +1,4 @@
-main { padding: 0; }
+main { padding: 0; /*overflow: hidden;*/ }
 @media only screen and (min-width: 601px) { main { padding: 0 5vw; } }
 @media only screen and (min-width: 993px) { main { padding: 0 10vw; } }
 @media only screen and (min-width: 1280px) { main { padding: 0 15vw; } }
@@ -19,6 +19,7 @@ nav ul.nav-right { transform: translate(0, 0); }
   border-bottom: 1px solid;
   margin-bottom: 0;
   cursor: pointer;
+  transition: background-color .3s;
 }
 .nav-item:hover { 
   background-color: transparent !important; 
@@ -26,3 +27,15 @@ nav ul.nav-right { transform: translate(0, 0); }
 }
 nav ul.nav-left .nav-item { padding-left: 2em; margin-right: 1em; }
 nav ul.nav-right .nav-item { padding-right: 2em; margin-left: 1em; }
+
+main .main-section {
+  padding-top: 10vh;
+}
+
+.timeline-disclaimer {
+  margin-top: 2em;
+  padding: 0 .3em;
+  font-size: 125%;
+  border: solid #666;
+  border-width: 0 1px 0 1px;
+}

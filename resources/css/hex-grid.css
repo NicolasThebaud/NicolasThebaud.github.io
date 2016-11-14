@@ -3,6 +3,7 @@
   padding-top: 10vh;
   margin: 0 auto;
   max-width: 1200px;
+  transition: opacity .5s;
 }
 
 .hex-col {
@@ -36,14 +37,13 @@
   margin-left: 3%;
 }
 
-
-
 .hex-content {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  cursor: pointer;
   background-position: center center;
   background-size: cover;
   overflow: hidden;
@@ -59,4 +59,54 @@
   content: '';
   opacity: 0;
   transition: opacity 0.5s;
+}
+
+.hex-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: all 0.5s;
+  -webkit-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -moz-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+/*.hex-col:hover*/ .hex-content:before,
+/*.hex-col:hover*/ .hex-content:after,
+/*.hex-col:hover*/ .hex-hover {
+  opacity: 1;
+}
+/* .hex-col:hover */ .hex-hover { 
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hex-col p {
+  font-family: 'Times';
+  font-style: italic;
+}
+
+/*h2 {
+  font-size: 32px;
+}
+h2:before, h2:after {
+  display: inline-block;
+  margin: 0 0.5em;
+  width: 0.75em;
+  height: 0.03em;
+  background: white;
+  content: '';
+  vertical-align: middle;
+  transition: all 0.3s;
+}*/
+
+.desc {
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
 }
