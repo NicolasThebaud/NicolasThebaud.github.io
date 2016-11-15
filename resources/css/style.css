@@ -1,10 +1,14 @@
-main { padding: 0; /*overflow: hidden;*/ }
+main { padding: 0; margin-top: 10vh;/*overflow: hidden;*/ }
 @media only screen and (min-width: 601px) { main { padding: 0 5vw; } }
 @media only screen and (min-width: 993px) { main { padding: 0 10vw; } }
 @media only screen and (min-width: 1280px) { main { padding: 0 15vw; } }
 
 .no-shadow { box-shadow: none; }
 
+nav { 
+  position: fixed !important; 
+  z-index: 1000;
+}
 nav ul {
   position: fixed;
   top: 0;
