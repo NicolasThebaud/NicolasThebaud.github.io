@@ -18,19 +18,19 @@
 	<nav class="grey lighten-2 no-shadow">
 		<div class="nav-wrapper">
 			<ul id="nav-mobile" class="nav-left">
-				<li><span href="" class="nav-item grey-text text-darken-3">Experience</span></li>
-				<li><span href="" class="nav-item grey-text text-darken-3">Skills</span></li>
+				<li><span href="" class="nav-item trigger-section0 grey-text text-darken-3">Experience</span></li>
+				<li><span href="" class="nav-item trigger-section1 grey-text text-darken-3">Skills</span></li>
 			</ul>
 			<ul id="nav-mobile" class="nav-right">
-				<li><span href="" class="nav-item grey-text text-darken-3">Work</span></li>
-				<li><span href="" class="nav-item grey-text text-darken-3">Projects</span></li>
+				<li><span href="" class="nav-item trigger-section2 grey-text text-darken-3">Work</span></li>
+				<li><span href="" class="nav-item trigger-section3 grey-text text-darken-3">Projects</span></li>
 			</ul>
 		</div>
 	</nav>
 
 	<main class="grey lighten-2">
 		<div class="container">
-			<div class="hex-grid">
+			<div class="hex-grid section-visible">
 				<div class="hex-col green lighten-1">
 					<div class="hex-content">
 						<div class="hex-hover">
@@ -47,14 +47,6 @@
 					</div>
 				</div>
 				
-				<div class="hex-col green lighten-1">
-					<div class="hex-content">
-						<div class="hex-hover">
-							<p class="flow-text">Work</p>
-						</div>
-					</div>
-				</div>
-				
 				<div class="hex-col hidden">
 					<div class="hex-content">
 					</div>
@@ -63,7 +55,7 @@
 				<div class="hex-col green lighten-1">
 					<div class="hex-content">
 						<div class="hex-hover">
-							<p class="flow-text">Projects</p>
+							<p class="flow-text">Work</p>
 						</div>
 					</div>
 				</div>
@@ -114,7 +106,7 @@
 			</ul>
 			<div class="row">
 				<div class="col s12 m10 offset-m1 l8 offset-l2">
-				<p class="center timeline-disclaimer">
+				<p class="center disclaimer">
 					At the end of my DUT, I made an internship at <b><i>Papa pique et maman coud</i></b>, a French clothing company. I worked on a product customization application for their website.
 					I was then hired for a couple extra month to work on another project; A stock management tool (WEB app too).<br/>
 					After that, I worked for 9 months for an accounting firm - as a WEB dev. again - before deciding to go back to school.<br/>
@@ -130,52 +122,68 @@
 	            <div class="row">
 	              <div class="col s3 m2">
 	                <!-- HTML/css -->
-	                <div class="card">
+	                <div class="card card-tech">
 	                  <div class="card-image">
-	                    <img src="resources/img/html_css.png">
+	                    <img class="activator" src="resources/img/html_css.png">
 	                  </div>
 	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">HTML/CSS</p>
 	              </div>
 	    
 	              <div class="col s3 m2">
 	                <!-- JS -->
-	                <div class="card">
+	                <div class="card card-tech">
 	                  <div class="card-image">
 	                    <img class="activator" src="resources/img/js.png">
 	                  </div>
 	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">JS</p>
 	              </div>
 	    
 	              <div class="col s3 m2">
 	                <!-- Node -->
-	                <div class="card">
+	                <div class="card card-tech">
 	                  <div class="card-image">
 	                    <img class="activator" src="resources/img/nodejs.png">
 	                  </div>
 	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">Node</p>
 	              </div>
 	    
 	              <div class="col s3 m2">
 	                <!-- Angular -->
-	                <div class="card">
+	                <div class="card card-tech">
 	                  <div class="card-image">
 	                    <img class="activator" src="resources/img/angular.png">
 	                  </div>
 	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">Angular</p>
 	              </div>
 	              
 	              <div class="col s3 m2">
 	                <!-- Mongo -->
-	                <div class="card">
+	                <div class="card card-tech">
 	                  <div class="card-image">
 	                    <img class="activator" src="resources/img/mongo.png">
 	                  </div>
 	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">Mongo</p>
+	              </div>
+
+	              <div class="col s3 m2">
+	                <!-- React -->
+	                <div class="card card-tech">
+	                  <div class="card-image">
+	                    <img class="activator" src="resources/img/reactjs.png">
+	                  </div>
+	                </div>
+	                <p class="center bold tech-desc green-text text-lighten-1">React</p>
 	              </div>
 	            </div>
 	          </div>
 	        </div>
-	        <p class="center-align">As you can imagine, I know plenty of other things. But to me, these are the most important.<br/>I think WEB applications are the future, and that's why I focus on them.</p>
+	        <p class="flow-text disclaimer">As you can imagine, I know plenty of other things. But to me, these are the most important.<br/>
+	        I think WEB applications are the future, and that's why I focus on them.</p>
 		</section>
 	</main>
 
@@ -185,8 +193,17 @@
 
         $(document).on('click', '.hex-content', function() {
         	var ref = this
-        	$('.hex-grid').fadeOut(500, function() {
-        		$('.main-section.section'+$('.hex-content').index(ref)).delay(200).fadeIn(750)
+        	$('.section-visible').fadeOut(500, function() {
+        		$('.main-section.section'+$('.hex-content').index(ref)).delay(200).fadeIn(750).addClass('section-visible')
+        	}) 
+        })
+
+        $(document).on('click', '[class*=trigger-section]', function() {
+        	var ref = /.*trigger\-(section.).*/.exec($(this).attr('class'))[1]
+        	console.log(ref)
+        	$('.section-visible').fadeOut(500, function() {
+        		console.log($('.main-section.'+ref))
+        		$('.main-section.'+ref).delay(200).fadeIn(750).addClass('section-visible')
         	})
         })
       })()

@@ -1,3 +1,5 @@
+.bold { font-weight: bold; }
+
 main { padding: 0; margin-top: 10vh;/*overflow: hidden;*/ }
 @media only screen and (min-width: 601px) { main { padding: 0 5vw; } }
 @media only screen and (min-width: 993px) { main { padding: 0 10vw; } }
@@ -7,6 +9,7 @@ main { padding: 0; margin-top: 10vh;/*overflow: hidden;*/ }
 
 nav { 
   position: fixed !important; 
+  top: 0;
   z-index: 1000;
 }
 nav ul {
@@ -36,10 +39,24 @@ main .main-section {
   padding-top: 10vh;
 }
 
-.timeline-disclaimer {
+.disclaimer {
   margin-top: 2em;
   padding: 0 .3em;
   font-size: 125%;
   border: solid #666;
   border-width: 0 1px 0 1px;
 }
+
+.card-tech+.tech-desc {
+  position: relative;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.card-tech:hover+.tech-desc {
+  opacity: 1;
+}
+
+
+
+
