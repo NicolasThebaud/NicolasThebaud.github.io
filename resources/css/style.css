@@ -28,10 +28,11 @@ nav ul.nav-right { transform: translate(0, 0); }
   cursor: pointer;
   transition: background-color .3s;
 }
-.nav-item:hover { 
+nav ul a:hover, .nav-item:hover, .nav-item.nav-activated { 
   background-color: transparent !important; 
   color: #66BB6A !important;
 }
+
 nav ul.nav-left .nav-item { padding-left: 2em; margin-right: 1em; }
 nav ul.nav-right .nav-item { padding-right: 2em; margin-left: 1em; }
 

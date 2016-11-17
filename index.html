@@ -23,7 +23,7 @@
 			</ul>
 			<ul id="nav-mobile" class="nav-right">
 				<li><span href="" class="nav-item trigger-section2 grey-text text-darken-3">Work</span></li>
-				<li><span href="" class="nav-item trigger-section3 grey-text text-darken-3">Projects</span></li>
+				<li><span href="" class="nav-item trigger-section3 grey-text text-darken-3">Contact</span></li>
 			</ul>
 		</div>
 	</nav>
@@ -61,130 +61,6 @@
 				</div>
 			</div>
 		</div>
-
-		<section class="main-section section0 grey lighten-2 green-text text-lighten-1" style="display:none">
-			<ul class="timeline">
-				<li>
-					<div class="direction-r">
-						<div class="flag-wrapper">
-							<span class="flag">3rd year degree</span>
-							<span class="time-wrapper"><span class="time">2016 - present</span></span>
-						</div>
-						<div class="desc">License Pro SIL - IUT of Nantes (France)</div>
-					</div>
-				</li>
-				
-				<li>
-					<div class="direction-l">
-						<div class="flag-wrapper">
-							<span class="flag">FITECO</span>
-							<span class="time-wrapper"><span class="time">2015 - 2016</span></span>
-						</div>
-						<div class="desc">Node.JS Full-Stack Developper</div>
-					</div>
-				</li>
-			
-				<li>
-					<div class="direction-l">
-						<div class="flag-wrapper">
-							<span class="flag">Papa pique et Maman coud</span>
-							<span class="time-wrapper"><span class="time">2015</span></span>
-						</div>
-						<div class="desc">WAMP Full-Stack Developper<br/> <a href="https://www.papapiqueetmamancoud.fr/configurateur-p.html" target="_blank">visible here</a></div>
-					</div>
-				</li>
-			
-				<li>
-					<div class="direction-r">
-						<div class="flag-wrapper">
-							<span class="flag">DUT Informatique</span>
-							<span class="time-wrapper"><span class="time">2013- 2015</span></span>
-						</div>
-						<div class="desc">University degree<br/>IUT de Vannes</div>
-					</div>
-				</li>
-			</ul>
-			<div class="row">
-				<div class="col s12 m10 offset-m1 l8 offset-l2">
-				<p class="center disclaimer">
-					At the end of my DUT, I made an internship at <b><i>Papa pique et maman coud</i></b>, a French clothing company. I worked on a product customization application for their website.
-					I was then hired for a couple extra month to work on another project; A stock management tool (WEB app too).<br/>
-					After that, I worked for 9 months for an accounting firm - as a WEB dev. again - before deciding to go back to school.<br/>
-					And here I am
-				</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="main-section section1 grey lighten-2 green-text text-lighten-1" style="display:none">
-	        <div class="row">
-	          <div class="col s12 m10 offset-m1">
-	            <div class="row">
-	              <div class="col s3 m2">
-	                <!-- HTML/css -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/html_css.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">HTML/CSS</p>
-	              </div>
-	    
-	              <div class="col s3 m2">
-	                <!-- JS -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/js.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">JS</p>
-	              </div>
-	    
-	              <div class="col s3 m2">
-	                <!-- Node -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/nodejs.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">Node</p>
-	              </div>
-	    
-	              <div class="col s3 m2">
-	                <!-- Angular -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/angular.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">Angular</p>
-	              </div>
-	              
-	              <div class="col s3 m2">
-	                <!-- Mongo -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/mongo.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">Mongo</p>
-	              </div>
-
-	              <div class="col s3 m2">
-	                <!-- React -->
-	                <div class="card card-tech">
-	                  <div class="card-image">
-	                    <img class="activator" src="resources/img/reactjs.png">
-	                  </div>
-	                </div>
-	                <p class="center bold tech-desc green-text text-lighten-1">React</p>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	        <p class="flow-text disclaimer">As you can imagine, I know plenty of other things. But to me, these are the most important.<br/>
-	        I think WEB applications are the future, and that's why I focus on them.</p>
-		</section>
 	</main>
 
     <script type="text/javascript">
@@ -192,19 +68,8 @@
         'use strict'
 
         $(document).on('click', '.hex-content', function() {
-        	var ref = this
-        	$('.section-visible').fadeOut(500, function() {
-        		$('.main-section.section'+$('.hex-content').index(ref)).delay(200).fadeIn(750).addClass('section-visible')
-        	}) 
-        })
-
-        $(document).on('click', '[class*=trigger-section]', function() {
-        	var ref = /.*trigger\-(section.).*/.exec($(this).attr('class'))[1]
-        	console.log(ref)
-        	$('.section-visible').fadeOut(500, function() {
-        		console.log($('.main-section.'+ref))
-        		$('.main-section.'+ref).delay(200).fadeIn(750).addClass('section-visible')
-        	})
+        	var links = ['experience.html', 'skills.html', 'work.html', 'contact.html']
+        	window.location = links[$('.hex-content').index(this)]
         })
       })()
     </script>
