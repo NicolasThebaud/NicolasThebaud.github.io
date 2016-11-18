@@ -1,3 +1,10 @@
+@-moz-document url-prefix() {
+  .hex-col {
+    border-radius: 50% !important;
+    margin-top: 0 !important;
+  }
+}
+
 .hex-grid {
   padding: 60px;
   padding-top: 10vh;
