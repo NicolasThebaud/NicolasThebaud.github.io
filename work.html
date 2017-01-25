@@ -61,7 +61,7 @@
     	  	  <div class="col s12 m6 offset-m3">
     	  	    <div class="row">
     	  	      <div class="col s3 offset-m3">
-    	  	        <div class="card findme-token clickable waves-effect waves-light black" data-link="https://github.com/	NicolasThebaud">
+    	  	        <div class="card findme-token clickable waves-effect waves-light black" data-link="https://github.com/NicolasThebaud">
     	  	          <div class="card-image">
     	  	            <img src="resources/img/github.png">
     	  	            <i class="pulse"></i>
@@ -82,5 +82,11 @@
     	  </div>
     	</section>
 	</main>
+
+	<script>
+		$(document).on('click', '.findme-token', function() {
+			window.location=$(this).attr('data-link')
+		})
+	</script>
 </body>
 </html>
