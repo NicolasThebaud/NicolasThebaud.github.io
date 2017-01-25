@@ -68,8 +68,13 @@
         'use strict'
 
         $(document).on('click', '.hex-content', function() {
-        	var links = ['experience.html', 'skills.html', 'work.html', 'contact.html']
+        	var links = ['experience.html', 'skills.html', 'contact.html', 'work.html']
         	window.location = links[$('.hex-content').index(this)]
+        })
+
+        $(document).on('click', '.nav-item', function() {
+        	var links = ['experience.html', 'skills.html', 'work.html', 'contact.html']
+        	window.location = links[$('.nav-item').index(this)]
         })
       })()
     </script>
