@@ -6,7 +6,6 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
 	<link rel='stylesheet' href="resources/css/style.css" />
 	<link rel='stylesheet' href="resources/css/timeline.css" />
-	<link rel='stylesheet' href="resources/css/hex-grid.css" />
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -29,25 +28,33 @@
 	</nav>
 
 	<main class="grey lighten-2">
-		<section class="main-section section1 grey lighten-2 green-text text-lighten-1">
+		<section class="main-section section1 grey lighten-2 grey-text text-darken-3">
 			<div class="container">
 				<p class="center flow-text disclaimer">
-					The name is <b>Nicolas Thebaud</b>.<br/>
-					The place is <b>Nantes, France</b>.<br/>
-					The mail address is <a href="mailto:thebaud.nicolas012@gmail.com">hidden for bots but still clickable</a>
+					The name is <b class="green-text text-lighten-1">Nicolas Thebaud</b>.<br/>
+					The place is <b class="green-text text-lighten-1">Nantes, France</b>.<br/>
+					The mail address is 
+						<a class="mail-hide">hidden for bots but still clickable</a>
+						<span class="mail-show">thebaud.nicolas012@gmail.com</span>
 					<br/>
 					The resume is availble and downloadable <a href="https://drive.google.com/file/d/0B0OomvWKT0cFWXN5SzJ6UTZuQzg/view">here</a>
 				</p>
 
 				<hr class="fancy"/>
 
-				<p class="center flow-text">
+				<p class="center flow-text text-sm">
 					This website was made by Nicolas Thebaud with love and passion (and a bit of coffee).<br/>
-					source is of course available on <a href="https://github.com/NicolasThebaud/NicolasThebaud.github.io">Github</a><br><br>
+					sources are of course available on <a href="https://github.com/NicolasThebaud/NicolasThebaud.github.io">Github</a><br><br>
 					Credits goes to <b>NilsWe</b> for his Timeline (<a href="http://codepen.io/NilsWe/pen/FemfK">http://codepen.io/NilsWe/pen/FemfK</a>)
 				</p>
 			</div>
 		</section>
 	</main>
+
+	<script>
+		$(document).on('click', '.mail-hide', function() {
+			$('.mail-hide, .mail-show').toggle()
+		})
+	</script>
 </body>
 </html>

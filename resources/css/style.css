@@ -1,6 +1,7 @@
-.bold { font-weight: bold; }
+.bold { font-weight: 400; }
 
-main { padding: 0; margin-top: 10vh;/*overflow: hidden;*/ }
+main { padding: 0; margin-top: 15vh;/*overflow: hidden;*/ }
+main.no-pad { margin-top: 2vh; }
 @media only screen and (min-width: 601px) { main { padding: 0 5vw; } }
 @media only screen and (min-width: 993px) { main { padding: 0 10vw; } }
 @media only screen and (min-width: 1280px) { main { padding: 0 15vw; } }
@@ -51,6 +52,7 @@ main .main-section.small-pad {
   border-width: 0 1px 0 1px;
 }
 
+.card-tech>.card-image { cursor: pointer; }
 .card-tech+.tech-desc {
   position: relative;
   opacity: 0;
@@ -98,3 +100,31 @@ hr.fancy {
   margin-top: 4em !important;
   margin-bottom: 4em !important;
 }
+
+.hex-col {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  cursor: pointer;
+}
+.hex-col>img {
+  position: relative;
+  width: 100%;
+}
+.hex-col>p {
+  position: relative;
+  margin: 0;
+  top: 150px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+.hex-col:nth-child(1) { margin-left: 23%; margin-right: 2%; }
+.hex-col:nth-child(2) { margin-left: 1%; }
+.hex-col:nth-child(3) { margin-left: 37%; margin-top: -9%; }
+
+.mail-show { display: none; }
+
+.text-sm { font-size: 1.3rem; }

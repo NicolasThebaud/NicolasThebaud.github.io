@@ -6,7 +6,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
   <link rel='stylesheet' href="resources/css/style.css" />
   <link rel='stylesheet' href="resources/css/timeline.css" />
-  <link rel='stylesheet' href="resources/css/hex-grid.css" />
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -15,51 +14,20 @@
 </head>
 
 <body class="grey lighten-2">
-	<nav class="grey lighten-2 no-shadow">
-		<div class="nav-wrapper">
-			<ul id="nav-mobile" class="nav-left">
-				<li><span href="" class="nav-item trigger-section0 grey-text text-darken-3">Experience</span></li>
-				<li><span href="" class="nav-item trigger-section1 grey-text text-darken-3">Skills</span></li>
-			</ul>
-			<ul id="nav-mobile" class="nav-right">
-				<li><span href="" class="nav-item trigger-section2 grey-text text-darken-3">Work</span></li>
-				<li><span href="" class="nav-item trigger-section3 grey-text text-darken-3">Contact</span></li>
-			</ul>
-		</div>
-	</nav>
-
 	<main class="grey lighten-2">
 		<div class="container">
-			<div class="hex-grid section-visible">
-				<div class="hex-col green lighten-1">
-					<div class="hex-content">
-						<div class="hex-hover">
-							<p class="flow-text">Experience</p>
-						</div>
-					</div>
+				<div class="hex-col">
+					<p class="flow-text white-text">Experience</p>
+					<img src="resources/img/hexagon.svg" />
 				</div>
-				
-				<div class="hex-col green lighten-1">
-					<div class="hex-content">
-						<div class="hex-hover">
-							<p class="flow-text">Skills</p>
-						</div>
-					</div>
+				<div class="hex-col">
+					<p class="flow-text white-text">Skills</p>
+					<img src="resources/img/hexagon.svg" />
 				</div>
-				
-				<div class="hex-col hidden">
-					<div class="hex-content">
-					</div>
+				<div class="hex-col">
+					<p class="flow-text white-text">Work</p>
+					<img src="resources/img/hexagon.svg" />
 				</div>
-				
-				<div class="hex-col green lighten-1">
-					<div class="hex-content">
-						<div class="hex-hover">
-							<p class="flow-text">Work</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</main>
 
@@ -67,9 +35,9 @@
       (function() {
         'use strict'
 
-        $(document).on('click', '.hex-content', function() {
-        	var links = ['experience.html', 'skills.html', 'contact.html', 'work.html']
-        	window.location = links[$('.hex-content').index(this)]
+        $(document).on('click', '.hex-col', function() {
+        	var links = ['experience.html', 'skills.html', 'work.html']
+        	window.location = links[$('.hex-col').index(this)]
         })
 
         $(document).on('click', '.nav-item', function() {
@@ -78,15 +46,5 @@
         })
       })()
     </script>
-
-    <!-- <div>
-    	<div style="position: absolute; left: 25%; top: 0; width: 1px; height: 100vh; background: crimson"></div>
-    	<div style="position: absolute; left: 50%; top: 0; width: 1px; height: 100vh; background: crimson"></div>
-    	<div style="position: absolute; left: 75%; top: 0; width: 1px; height: 100vh; background: crimson"></div>
-
-    	<div style="position: absolute; left: 0; top: 25%; width: 100vw; height: 1px; background: crimson"></div>
-    	<div style="position: absolute; left: 0; top: 50%; width: 100vw; height: 1px; background: crimson"></div>
-    	<div style="position: absolute; left: 0; top: 75%; width: 100vw; height: 1px; background: crimson"></div>
-    </div> -->
   </body>
 </html>
